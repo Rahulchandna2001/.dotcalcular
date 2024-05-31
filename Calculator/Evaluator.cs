@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace Calculator{
     public class Evaluator{
         public static float Eval(string Operator, params float[] Operands){
@@ -5,6 +7,9 @@ namespace Calculator{
             switch(Operator){
                 case "+":
                     result = Add.Eval(Operands[0], Operands[1]);
+                    break;
+                case "-":
+                    result = Subtract.Eval(Operands[0], Operands[1]);
                     break;
                 case "*":
                     result = Multiply.Eval(Operands[0], Operands[1]);
